@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<link rel="stylesheet" type="text/css" href="SHSHC.css">
+<meta charset="UTF-8">
+<meta name="keywords" content="SHS, Humanitarian, Summit">
+<div id="website3">
+	<head>
+		<h1>Map of Africa</h1>
+	</head>
+	<head>
+	</head>
+	<body>
+		<iframe width="1500" height="1250" frameborder="0" style="border:0"
+ src="https://www.google.com/maps/embed/v1/place?q=Africa&key=AIzaSyCuQ9rgQBOkOIUWTV9E5x9VtY9Bzkf8x5E" allowfullscreen></iframe> 
+	<body>
+	<footer>
+	</footer>
+</div>
+</html>
