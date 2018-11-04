@@ -1,76 +1,288 @@
-#!/usr/bin/python
 from tkinter import *
-
 wind = Tk()
-wind.geometry('+850+420')
-wind.title('Calculator 2.0')
-
-#def stoofybutton():
-    #label3 = Label (text = "Stoof3" , fg = "white" , bg = "blue")
-    #label3.grid (row = 1 , column = 1)
-    #label3.grid()
-def one():
-    label1 = Label (text = "1")
-    label1.grid (row = 1 , column = 0)
-def two():
-    label1 = Label (text = "2")
-    label1.grid (row = 1 , column = 0)
-def three():
-    label1 = Label (text = "3")
-    label1.grid (row = 1 , column = 0)
-def four():
-    label1 = Label (text = "4")
-    label1.grid (row = 1 , column = 0)
-def five():
-    label1 = Label (text = "1")
-    label1.grid (row = 1 , column = 0)
-def six():
-    label1 = Label (text = "2")
-    label1.grid (row = 1 , column = 0)
-def seven():
-    label1 = Label (text = "3")
-    label1.grid (row = 1 , column = 0)
-def eight():
-    label1 = Label (text = "4")
-    label1.grid (row = 1 , column = 0)
-def nine():
-    label1 = Label (text = "1")
-    label1.grid (row = 1 , column = 0)
+def windstart():
+    wind.title ("Calculator 2.O")
+    wind.config(bg = "white")
+windstart()
+#-----------------------------------------------------------------------------------
+#Number Definitions:
 def zero():
-    label1 = Label (text = "2")
-    label1.grid (row = 1 , column = 0)
+    if display.cget ("text") == "":
+        top = "0"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "0"
+        display.config (text = top)
+        
+def one():
+    if display.cget ("text") == "":
+        top = "1"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "1"
+        display.config (text = top)
+        
+def two():
+    if display.cget ("text") == "":
+        top = "2"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "2"
+        display.config (text = top)
+        
+def three():
+    if display.cget ("text") == "":
+        top = "3"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "3"
+        display.config (text = top)
+        
+def four():
+    if display.cget ("text") == "":
+        top = "4"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "4"
+        display.config (text = top)
+        
+def five():
+    if display.cget ("text") == "":
+        top = "5"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "5"
+        display.config (text = top)
+        
+def six():
+    if display.cget ("text") == "":
+        top = "6"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "6"
+        display.config (text = top)
+        
+def seven():
+    if display.cget ("text") == "":
+        top = "7"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "7"
+        display.config (text = top)
+        
+def eight():
+    if display.cget ("text") == "":
+        top = "8"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "8"
+        display.config (text = top)
+        
+def nine():
+    if display.cget ("text") == "":
+        top = "9"
+        display.config (text = top)
+    else:
+        top = display.cget ("text") + "9"
+        display.config (text = top)
+        
+def decimal():
+    if display.cget("text") == "":
+        top = "."
+        display.config(text = top)
+    if "." in display.cget("text"):
+        print("already dot")
+        
+    else:
+        top = display.cget("text") + "."
+        display.config(text = top)
+#-----------------------------------------------------------------------------------
+#Opperation Definitions:
+def add():
+    first = float(display.cget("text"))
+    display.config (text= "")
+    inv1.config (text= first)
+    opp = "add"
+    inv3.config (text= opp)
+    
+def subtract():
+    first = float(display.cget("text"))
+    display.config (text = "")
+    inv1.config (text= first)
+    opp = "subtract"
+    inv3.config (text= opp)
+    
+def multiply():
+    first = float(display.cget("text"))
+    display.config (text = "")
+    inv1.config (text= first)
+    opp = "multiply"
+    inv3.config (text= opp)
+    
+def devide():
+    first = float(display.cget("text"))
+    display.config (text= "")
+    inv1.config (text= first)
+    opp = "devide"
+    inv3.config (text= opp)
+    
+def exponent():
+    first = float(display.cget("text"))
+    display.config (text= "")
+    inv1.config (text= first)
+    opp = "exponent"
+    inv3.config (text= opp)
+    
+def equal():
+    second = float(display.cget("text"))
+    inv2.config (text= second)
+    if inv3.cget("text") == "add":
+        add2()
+    elif inv3.cget("text") == "subtract":
+        subtract2()
+    elif inv3.cget("text") == "multiply":
+        multiply2()
+    elif inv3.cget("text") == "devide":
+        devide2()
+    elif inv3.cget("text") == "exponent":
+        exponent2()
+    else:
+        display.config(text = "Error")
+        
+def negative():
+    if display.cget("text") == "":
+        top = "-"
+        display.config(text = ct)
+    if "-" in display.cget("text"):
+        display.cget("text").replace("-","") 
+        print("set positive")
+    else:
+        top = "-" + display.cget("text")
+        display.config(text = top)
+        
+def add2():
+    product = inv1.cget("text")+ inv2.cget("text")
+    display.config(text= product)
+    
+def subtract2():
+    product = inv1.cget("text")- inv2.cget("text")
+    display.config(text= product)
+    
+def multiply2():
+    product = inv1.cget("text")* inv2.cget("text")
+    display.config(text= product)
+    
+def devide2():
+    product = inv1.cget("text")/ inv2.cget("text")
+    display.config(text= product)
+    
+def exponent2():
+    product = inv1.cget("text")** inv2.cget("text")
+    display.config(text= product)
+    
+def clear():
+    top = ""
+    display.config(text = top)
+def fake():
+    print("did nothing")
+#-----------------------------------------------------------------------------------
+#Defining Variables
+first = 0.000
+second = 0.000
+product = 0.000
+top = ""
+opp = ""
+#------------------------------------------------------------------------------------
+#Buttons
+row1 = Frame(wind)
+row1.pack()
+row2 = Frame(wind)
+row2.pack()
+row3 = Frame(wind)
+row3.pack()
+row4 = Frame(wind)
+row4.pack()
+row5 = Frame(wind)
+row5.pack()
+row6 = Frame(wind)
+row6.pack()
 
-#label1 = Label(text = "Stoof" , fg = "red" , bg = "pink", width= 15)
-#label1.grid()
-#label2 = Label(text = "Stoof2" , fg = 'red' , bg = "pink", width= 15)
-#label2.grid()
+b1 = Button(row2, text = "1", command = one, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b1.pack(side=LEFT)
 
-button1 = Button (text = "1" , command = one)
-button1.grid(row = 2 , column = 0)
+b2 = Button(row2, text = "2", command = two, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b2.pack(side=LEFT)
 
-button2 = Button (text = "2" , command = two)
-button2.grid(row = 2 , column = 1)
+b3 = Button(row2, text = "3", command = three, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b3.pack(side=LEFT)
 
-button3 = Button (text = "3" , command = three)
-button3.grid(row = 2 , column = 2)
+bp = Button(row2, text = "+", command = add, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+bp.pack(side=LEFT)
 
-button4 = Button (text = "4" , command = four)
-button4.grid(row = 3 , column = 0)
+be = Button(row2, text = "^", command = exponent, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+be.pack(side=LEFT)
 
-button4 = Button (text = "5" , command = five)
-button4.grid(row = 3 , column = 1)
+b4 = Button(row3, text = "4", command = four, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b4.pack(side=LEFT)
 
-button4 = Button (text = "6" , command = six)
-button4.grid(row = 3 , column = 2)
+b5 = Button(row3, text = "5", command = five, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b5.pack(side=LEFT)
 
-button4 = Button (text = "7" , command = seven)
-button4.grid(row = 4 , column = 0)
+b6 = Button(row3, text = "6", command = six, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b6.pack(side=LEFT)
 
-button4 = Button (text = "8" , command = eight)
-button4.grid(row = 4 , column = 1)
+bm = Button(row3, text = "-", command = subtract, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+bm.pack(side=LEFT)
 
-button4 = Button (text = "9" , command = nine)
-button4.grid(row = 4 , column = 2)
+b7 = Button(row4, text = "7", command = seven, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b7.pack(side=LEFT)
 
-button4 = Button (text = "0" , command = zero)
-button4.grid(row = 5 , column = 1)
+b8 = Button(row4, text = "8", command = eight, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b8.pack(side=LEFT)
+
+b9 = Button(row4, text = "9", command = nine, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b9.pack(side=LEFT)
+
+bt = Button(row4, text = "x", command = multiply, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+bt.pack(side=LEFT)
+
+bc = Button(row4, text = "CE", command = clear, width = 5, height = 2, bg = "red", padx=10, pady=10)
+bc.pack(side=LEFT)
+
+bdot = Button(row5, text = ".", command = decimal, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+bdot.pack(side=LEFT)
+
+b0 = Button(row5, text = "0", command = zero, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+b0.pack(side=LEFT)
+
+bneg = Button(row5, text = "+/-", command = negative, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+bneg.pack(side=LEFT)
+
+bd = Button(row5, text = "/", command = devide, width = 5, height = 2, bg = "grey", padx=10, pady=10)
+bd.pack(side=LEFT)
+
+bq = Button(row5, text = "=", command = equal, width = 5, height = 2, bg = "green", padx=10, pady=10)
+bq.pack(side=LEFT)
+#----------------------------------------------------------------------------------------------
+#Labels
+display = Label(row1, text = top, height = 2, font = "bold", bd = 0)
+display.pack(fill=X)
+inv1 = Label(text=top)
+inv2 = Label(text=top)
+inv3 = Label(text=opp)
+#----------------------------------------------------------------------------------------------
+#Test Menu
+titlemenu = Menu(wind)
+wind.config(menu=titlemenu)
+
+submenu1 = Menu(titlemenu)
+titlemenu.add_cascade(label= "test", menu = submenu1)
+submenu1.add_command(label = "test", command = fake)
+submenu1.add_command(label = "test", command = fake)
+submenu1.add_command(label = "test", command = fake)
+
+submenu2 = Menu(titlemenu)
+titlemenu.add_cascade(label= "test", menu = submenu2)
+submenu2.add_command(label = "test", command = fake)
+submenu2.add_command(label = "test", command = fake)
+submenu2.add_command(label = "test", command = fake)
