@@ -1,0 +1,76 @@
+#!/usr/bin/python
+from tkinter import *
+
+wind = Tk()
+wind.geometry('+850+420')
+wind.title('Calculator 2.0')
+
+#def stoofybutton():
+    #label3 = Label (text = "Stoof3" , fg = "white" , bg = "blue")
+    #label3.grid (row = 1 , column = 1)
+    #label3.grid()
+def one():
+    label1 = Label (text = "1")
+    label1.grid (row = 1 , column = 0)
+def two():
+    label1 = Label (text = "2")
+    label1.grid (row = 1 , column = 0)
+def three():
+    label1 = Label (text = "3")
+    label1.grid (row = 1 , column = 0)
+def four():
+    label1 = Label (text = "4")
+    label1.grid (row = 1 , column = 0)
+def five():
+    label1 = Label (text = "1")
+    label1.grid (row = 1 , column = 0)
+def six():
+    label1 = Label (text = "2")
+    label1.grid (row = 1 , column = 0)
+def seven():
+    label1 = Label (text = "3")
+    label1.grid (row = 1 , column = 0)
+def eight():
+    label1 = Label (text = "4")
+    label1.grid (row = 1 , column = 0)
+def nine():
+    label1 = Label (text = "1")
+    label1.grid (row = 1 , column = 0)
+def zero():
+    label1 = Label (text = "2")
+    label1.grid (row = 1 , column = 0)
+
+#label1 = Label(text = "Stoof" , fg = "red" , bg = "pink", width= 15)
+#label1.grid()
+#label2 = Label(text = "Stoof2" , fg = 'red' , bg = "pink", width= 15)
+#label2.grid()
+
+button1 = Button (text = "1" , command = one)
+button1.grid(row = 2 , column = 0)
+
+button2 = Button (text = "2" , command = two)
+button2.grid(row = 2 , column = 1)
+
+button3 = Button (text = "3" , command = three)
+button3.grid(row = 2 , column = 2)
+
+button4 = Button (text = "4" , command = four)
+button4.grid(row = 3 , column = 0)
+
+button4 = Button (text = "5" , command = five)
+button4.grid(row = 3 , column = 1)
+
+button4 = Button (text = "6" , command = six)
+button4.grid(row = 3 , column = 2)
+
+button4 = Button (text = "7" , command = seven)
+button4.grid(row = 4 , column = 0)
+
+button4 = Button (text = "8" , command = eight)
+button4.grid(row = 4 , column = 1)
+
+button4 = Button (text = "9" , command = nine)
+button4.grid(row = 4 , column = 2)
+
+button4 = Button (text = "0" , command = zero)
+button4.grid(row = 5 , column = 1)
