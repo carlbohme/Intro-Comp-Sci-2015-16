@@ -1,0 +1,56 @@
+print("   " * 1000)
+loop = 1
+while (loop == 1):
+
+    integer1 = int(raw_input("Enter First Number"))
+    print("   " * 1000)
+    proccess = raw_input("Enter Mathematic Symbol(Multiply,Devide,Add,Subtract,Exponent)")
+    print("   " * 1000)
+    integer2 = int(raw_input("Enter Second Number"))
+    print("   " * 1000)
+
+
+    if proccess == "Multiply":
+        print("Your Result Is", integer1 * integer2)
+    if proccess == "x":
+        print('Your Result Is', integer1 * integer2)
+    if proccess == "*":
+        print("Your Result Is ", integer1 * integer2)
+    if proccess == "Times":
+        print("Your Result Is ", integer1 * integer2)
+
+    if proccess == "Devide":
+        print("Your Result Is", integer1 / integer2)
+    if proccess == "/":
+        print('Your Result Is', integer1 / integer2)
+    if proccess == "Over":
+        print("Your Result Is ", integer1 / integer2)
+
+
+    if proccess == "Add":
+        print("Your Result Is ", integer1 + integer2)
+    if proccess == "+":
+        print("Your Result Is ", integer1 + integer2)
+    if proccess == "Plus":
+        print("Your Result Is ", integer1 + integer2)
+
+
+    if proccess == "Subtract":
+        print("Your Result Is ", integer1 - integer2)
+    if proccess == "Minus":
+        print("Your Result Is ", integer1 - integer2)
+    if proccess == "-":
+        print("Your Result Is ", integer1 - integer2)
+
+
+
+    if proccess == "Exponent":
+        print("Your Result Is ", integer1 ** integer2)
+    if proccess == "To The Power Of":
+        print("Your Result Is ", integer1 ** integer2)
+    if proccess == "To The":
+        print("Your Result Is ", integer1 ** integer2)
+    if proccess == "**":
+        print("Your Result Is ", integer1 ** integer2)
+    if proccess == "^":
+        print("Your Result Is ", integer1 ** integer2)
