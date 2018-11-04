@@ -1,0 +1,379 @@
+from tkinter import *
+import time
+import sys
+import os
+
+global activeuser
+global name
+activeuser = "test"
+name = "test"
+
+
+def login():
+
+    def store():
+        file = open("users.txt","r") 
+        line = file.readlines()
+        existence = "f"
+        for contents in line:
+            if contents == (E1.get() + E2.get() + "\n"):
+                existence = "t"
+            if existence == "t":
+                print("Username Or Password Already Taken")
+        if existence == "f":
+                with open("users.txt","a") as file:
+                    file.write(E1.get() + E2.get() + "\n")
+                global activeuser
+                global name
+                activeuser = E1.get() + E2.get()
+                name = E1.get()
+                if activeuser == "":
+                    activeuser = "GuestUser"
+                if name == "":
+                    name = "Guest"
+                with open(activeuser + ".txt","w") as file:
+                    file.write("none")
+    def retreive():
+        file = open("users.txt","r") 
+        line = file.readlines()
+        for contents in line:
+            existence2 = "f"
+            if contents == (E1.get() + E2.get() + "\n"):
+                existence2 = "t"
+            if existence2 == "t":
+                global activeuser
+                global name
+                activeuser = E1.get() + E2.get()
+                name = E1.get()
+                if activeuser == "":
+                    activeuser = "GuestUser"
+                if name == "":
+                    name = "Guest"
+                game()
+                wind4.destroy()
+            elif existence2 == "f":
+                print("Wrong Username or Password")
+            file.close()
+    
+    wind4 = Tk()
+    wind4.title ("Login")
+    
+    user = Label (wind4, text = "Username", justify = CENTER)
+    user.pack()
+    E1 = Entry(wind4, fg = "red", bd =2, justify = CENTER)
+    E1.pack()
+    
+    password = Label (wind4, text = "Password", justify = CENTER)
+    password.pack()
+    E2 = Entry(wind4, fg = "red", bd =2, justify = CENTER)
+    E2.pack()
+    
+    bcreate = Button (wind4, text = "Create User", command = store)
+    bcreate.pack()
+
+    blogin = Button (wind4, text = "Login", command = retreive)
+    blogin.pack()
+
+    helplabel = Label(wind4, text = "To sign in as guest leave both username" + "\n" + "and password blank and click Create User" + "\n" + "then Login!")
+    helplabel.pack()
+    
+login()
+
+
+
+def game():
+
+    #Deffinitions:
+    
+    wind = Tk()
+
+    def windstart():
+        wind.title ("Match")
+        wind.config (bg = "yellow")
+    windstart()
+    
+    import random
+    hidden = ["PIG", "COW", "SHEEP", "LLAMA", "HORSE", "GOAT", "CHICKEN", "DOG"]
+
+    b1v = random.choice(hidden)
+    b2v = random.choice(hidden)
+    b3v = random.choice(hidden)
+    b4v = random.choice(hidden)
+    b5v = random.choice(hidden)
+    b6v = random.choice(hidden)
+    b7v = random.choice(hidden)
+    b8v = random.choice(hidden)
+    b9v = random.choice(hidden)
+
+    last = "outside"
+
+    def clear():
+        b1.config(text = "")
+        b2.config(text = "")
+        b3.config(text = "")
+        b4.config(text = "")
+        b5.config(text = "")
+        b6.config(text = "")
+        b7.config(text = "")
+        b8.config(text = "")
+        b9.config(text = "") 
+
+    def b1c():
+        global last
+        b1.config(text = b1v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b1v 
+        else:
+            if b1v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+            
+    def b2c():
+        global last
+        b2.config(text= b2v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b2v 
+        else:
+            if b2v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+    def b3c():
+        global last
+        b3.config(text = b3v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b3v 
+        else:
+            if b3v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+    def b4c():
+        global last
+        b4.config(text = b4v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b4v 
+        else:
+            if b4v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+    def b5c():
+        global last
+        b5.config(text = b5v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b5v 
+        else:
+            if b5v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+    def b6c():
+        global last
+        b6.config(text = b6v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b6v 
+        else:
+            if b6v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+    def b7c():
+        global last
+        b7.config(text = b7v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b7v 
+        else:
+            if b7v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+    def b8c():
+        global last
+        b8.config(text = b8v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b8v 
+        else:
+            if b8v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+    def b9c():
+        global last
+        b9.config(text = b9v)
+        score.config (text = score.cget("text")+1)
+        if score.cget("text") % 2 != 0:
+           last = b9v 
+        else:
+            if b9v == last:
+                win.config(text = "You Win!")
+                winwindow()
+            else:
+                clear()
+    def logout():
+        login()
+        wind.destroy()
+    def winwindow():
+        wind2 = Tk()
+        wind2.title ("Win")
+        wind2.config (bg = "white")
+        #-------------------
+        def quit():
+            wind2.destroy()
+        def savescore():
+            with open(activeuser+".txt","w") as file:
+                file.write(str(win14.cget("text")))
+        def again():
+            game()
+            wind2.destroy()
+        #-------------------                
+        newrow1 = Frame(wind2)
+        newrow1.pack()
+        newrow2 = Frame(wind2)
+        newrow2.pack()
+        newrow3 = Frame(wind2)
+        newrow3.pack()
+        newrow4 = Frame(wind2)
+        newrow4.pack()
+        newrow5 = Frame(wind2)
+        newrow5.pack()
+        newrow6 = Frame(wind2)
+        newrow6.pack()
+
+        win12 = Label(newrow1, text = "You Won " + name + "!", height = 2, fg = "green", bg = "white")
+        win12.pack(side=LEFT)
+
+        win13 = Label(newrow2, text = "Your Score Is:", height = 2, bg = "white")
+        win13.pack(side=LEFT)
+            
+        win14 = Label(newrow2, text = score.cget("text"), fg = "blue", height = 2, bg = "white")
+        win14.pack(side=LEFT)
+
+        high = open(activeuser+".txt","r")
+        high2 = high.readlines()
+        for x in high2:
+            global x
+            
+        highscore = Label(newrow3, text = "Your Saved Score Is:" + x, bg = "white")
+        highscore.pack()
+
+        bagain = Button(newrow4, text="Play Again!", command = again, height = 2, width = 10)
+        bagain.pack()
+
+        save = Button(newrow5, text="Save Score", command = savescore, height = 2, width = 10)
+        save.pack()
+
+        bquit = Button(newrow6, text="Quit", command = quit, height = 2, width = 10)
+        bquit.pack()
+        
+        #------------------
+        wind.destroy()
+
+    def htp():
+        wind3 = Tk()
+        wind3.title ("How To Play")
+        wind3.config (bg = "white")
+
+        def quit():
+            wind3.destroy()
+        
+        row1 = Frame(wind3)
+        row1.pack()
+        row2 = Frame(wind3)
+        row2.pack()
+        row3 = Frame(wind3)
+        row3.pack()
+        row4 = Frame(wind3)
+        row4.pack()
+
+        title = Label(row1, text = "The Goal: Find two matching tiles.", height = 2, bg = "white")
+        title.pack(side=LEFT)
+        title = Label(row2, text = "How To Play: Click one tile then click another that has the matching word.", height = 2, bg = "white")
+        title.pack(side=LEFT)
+        title = Label(row3, text = "Hint: There is a secret way to win, see if you can find it!", height = 2, bg = "white")
+        title.pack(side=LEFT)
+
+        bquit = Button(row4, text="Close", command = quit, height = 2, width = 10)
+        bquit.pack()
+
+    #--------------------------------------------------------------------------------
+    #Buttons
+
+    row1 = Frame(wind)
+    row1.pack()
+    rowwin = Frame(wind)
+    rowwin.pack()
+    row2 = Frame(wind)
+    row2.pack()
+    row3 = Frame(wind)
+    row3.pack()
+    row4 = Frame(wind)
+    row4.pack()
+    row5 = Frame(wind)
+    row5.pack()
+                
+    b1 = Button(row2, text = "", command = b1c, width = 10, height = 5, bg = "yellow")
+    b1.pack(side=LEFT)
+
+    b2 = Button(row2, text = "", command = b2c, width = 10, height = 5, bg = "yellow")
+    b2.pack(side=LEFT)
+
+    b3 = Button(row2, text = "", command = b3c, width = 10, height = 5, bg = "yellow")
+    b3.pack(side=LEFT)
+
+    b4 = Button(row3, text = "", command = b4c, width = 10, height = 5, bg = "yellow")
+    b4.pack(side=LEFT)
+
+    b5 = Button(row3, text = "", command = b5c, width = 10, height = 5, bg = "yellow")
+    b5.pack(side=LEFT)
+
+    b6 = Button(row3, text = "", command = b6c, width = 10, height = 5, bg = "yellow")
+    b6.pack(side=LEFT)
+
+    b7 = Button(row4, text = "", command = b7c, width = 10, height = 5, bg = "yellow")
+    b7.pack(side=LEFT)
+
+    b8 = Button(row4, text = "", command = b8c, width = 10, height = 5, bg = "yellow")
+    b8.pack(side=LEFT)
+
+    b9 = Button(row4, text = "", command = b9c, width = 10, height = 5, bg = "yellow")
+    b9.pack(side=LEFT)
+
+    blogout = Button(row5, text = "Logout", command = logout, width = 10, height = 5, bg = "yellow")
+    blogout.pack(side=RIGHT)
+    
+    #-------------------------------------------------------------------------------
+    #Labels
+    title = Label(row1, text = "Your Score is:", height = 2, bg = "yellow")
+    title.pack(side=LEFT)
+    score = Label(row1, text = 0, fg = "blue", height = 2, bg = "yellow")
+    score.pack(side=LEFT)
+    win = Label(rowwin, text = "", height = 2, bg = "yellow")
+    win.pack()
+    current = Label(row5, text = name, bg = "yellow")
+    current.pack(side=LEFT)
+    #----------------------------------------------------------------------------------------------
+    #Test Menu
+    titlemenu = Menu(wind)
+    wind.config(menu=titlemenu)
+
+    submenu1 = Menu(titlemenu)
+    titlemenu.add_cascade(label= "Game", menu = submenu1)
+    submenu1.add_command(label = "Help", command = htp) 
