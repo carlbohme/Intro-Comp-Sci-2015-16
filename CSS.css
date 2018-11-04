@@ -1,0 +1,137 @@
+@charset "UTF-8";
+#headline {
+	color: White;
+	background-color:black;
+	text-align: center;
+	padding:5px;
+	margin: 5px;
+}
+#linkline{
+	color: black;
+	background-color: silver;
+	text-align: center;
+	padding: 5px;
+	border: 3px solid black;
+	margin: 8px;
+}
+#p1 {
+	color: black;
+	background-color:white;
+	height:500px;
+	width:260px;
+	text-align: center;
+	float:left;
+	border: 3px solid black;
+	margin: 5px;
+}
+#p2 {
+	float:left;
+	border: 3px solid black;
+	padding-bottom: 0px;
+	margin: 5px;
+}
+#p3 {
+	color:black;
+	background-color:silver;
+	height:150px;
+	width:230px;
+	float:right;
+	text-align:center;
+	border: 3px solid black;
+	margin: 5px;
+}
+#p4 {
+	float:left;
+	border: 3px solid black;
+	padding: 0px;
+	margin: 5px;
+}
+#p5 {
+	border: 3px solid black;
+	color:black;
+	background-color:silver;
+	float: right;
+	height:334px;
+	width:230px;
+	text-align:center;
+	float: top;
+	margin: 5px;
+}
+#foot {
+	color:white;
+	text-align:center;
+	background-color:silver;
+	padding:5px;
+	clear:both;
+	border: 3px solid black;
+	margin: 5px;
+}
+#website{
+	max-width: 1554px;
+	min-width: 1554px;
+}
+body{
+	background-image: url("forest.jpg");
+	background-size: 150px 150px;
+	background-repeat: repeat;
+}
+img{
+	padding-bottom: 0px;
+}
+
+
+
+
+:link{
+	color: green;
+	text-decoration: underline;
+}
+:visited{
+	color: black;
+}
+
+
+
+
+#headline2 {
+	color: White;
+	background-color:black;
+	text-align: center;
+	padding:5px;
+	margin: 5px;
+}
+#page2 {
+	max-width: 1554px;
+	min-width: 1554px;
+}
+#p6 {
+	color: black;
+	background-color:white;
+	height:500px;
+	width:260px;
+	text-align: center;
+	float:left;
+	border: 3px solid black;
+	margin: 5px;
+}
+#p7 {
+	float:left;
+	margin: 3px;
+	padding-bottom: 0px;
+}
+#p8 {
+	color:black;
+	background-color:white;
+	height:200px;
+	width:230px;
+	float:left;
+	text-align:center;
+	border: 3px solid black;
+	margin: 5px;
+}
+iframe {
+	float:bottom;
+	border: 3px solid black;
+	padding-bottom: 0px;
+	margin: 5px;
+}
