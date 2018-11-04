@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<link rel="stylesheet" type="text/css" href="SHSHC.css">
+<meta charset="UTF-8">
+<meta name="keywords" content="SHS, Humanitarian, Summit">
+<div id="page2">
+	<head>
+		<div id="headline2">
+			<h1>Fundraising Events</h1>
+		</div>
+	</head>
+	<head>
+		<div id="linkline">
+			<a href="SHSHC.html">Home</a>
+		</div>
+	</head>
+	<body>
+		<div id="p6">
+			<br>
+			<br>
+			<br>
+			<p>We stive to have fundraisers as<br>much as we possibly can. They will<br>be occuring almost every weekend.</p>
+			<br>
+			<br>
+			<br>
+			<p>Fundraisers will be planned<br>during the weekly meetings and<br>if you plan lettering in the club<br>you must attend as many fundraisers<br>as possible.<p>
+			<br>
+			<br>
+			<br>
+			<p>We will have information about<br>when and where these fundraiser are<br>posted on the calender to the right.</p>
+		</div>
+		<div id="p7">
+			<iframe src="https://www.google.com/calendar/embed?src=ctt8q80kgu3h2uokv4pm7nqbl8%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="500" height="496" frameborder="0" scrolling="no"></iframe>
+		</div>
+		<div id="p9">
+			<iframe width="746" height="496" src="https://www.youtube.com/embed/7PBeBNCKiWs" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div id="p8">
+		<br>
+		<br>
+			<p>For more information abou<br>upcoming events, email<br>either Taylor SB, the<br>president or Henry R, the VP.</p>
+		</div>
+	</body>
+	<footer>
+		<div id="foot">
+			<a href="http://www.bend.k12.or.us/education/school/school.php?sectionid=121" target="_blank">SHS Home Page</a>
+		</div>
+	</footer>
+</div>
+</html>
